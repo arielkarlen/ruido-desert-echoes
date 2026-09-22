@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Facebook, Instagram, Play, Youtube, X } from "lucide-react";
-import { members } from "../config/members";
 import { meta } from "../config/meta";
 import { tracks } from "../config/tracks";
 import albumCover from "../assets/dunas-de-sangre.jpg";
@@ -8,6 +7,7 @@ import logoAsset from "../assets/logoFinal.png.asset.json";
 import MainHeader from "@/components/page/header";
 import HeroBanner from "@/components/page/heroBanner";
 import History from "@/components/page/history";
+import Members from "@/components/page/members";
 const pageTitle =
   meta.find((item) => typeof item.title === "string")?.title ??
   "R U I D O — Stoner / Doom / Desert Rock";
@@ -27,45 +27,7 @@ function Index() {
       <main>
         <HeroBanner />
         <History />
-        <section id="banda" className="border-y border-border bg-secondary/40 py-28 md:py-40">
-          <div className="mx-auto max-w-7xl px-5 md:px-8">
-            <div className="mb-14 flex items-end justify-between gap-8">
-              <div>
-                <p className="section-kicker">02 — Integrantes</p>
-                <h2 className="section-title mt-5">Somos RUIDO</h2>
-              </div>
-              <p className="hidden max-w-xs text-right text-sm leading-6 text-muted-foreground md:block">
-                Cuatro fuerzas. Una sola masa de aire desplazándose.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-              {members.map((member, index) => (
-                <article key={member.role} className="member-card group">
-                  <div className="relative aspect-[3/4] overflow-hidden bg-card">
-                    <img
-                      src={member.image}
-                      alt={`${member.name}, ${member.role}`}
-                      width={768}
-                      height={1024}
-                      loading="lazy"
-                      className="h-full w-full object-cover grayscale transition duration-700 group-hover:scale-[1.02] group-hover:grayscale-0"
-                    />
-                    <span className="absolute left-3 top-3 font-mono text-[9px] text-foreground/60">
-                      0{index + 1}
-                    </span>
-                  </div>
-                  <div className="border-t border-border px-1 py-5">
-                    <h3 className="font-display text-sm font-black uppercase md:text-base">
-                      {member.name}
-                    </h3>
-                    <p className="mt-1 text-xs uppercase text-primary">{member.role}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
+        <Members />
         <section id="musica" className="mx-auto max-w-6xl px-5 py-28 md:px-8 md:py-40">
           <p className="section-kicker mb-12">03 — Música</p>
           <div className="grid items-center gap-14 md:grid-cols-2 md:gap-20">
