@@ -8,6 +8,7 @@ import HeroBanner from "@/components/page/heroBanner";
 import History from "@/components/page/history";
 import Members from "@/components/page/members";
 import Music from "@/components/page/music";
+import Contact from "@/components/page/contact";
 const pageTitle =
   meta.find((item) => typeof item.title === "string")?.title ??
   "R U I D O — Stoner / Doom / Desert Rock";
@@ -29,32 +30,7 @@ function Index() {
         <History />
         <Members />
         <Music />
-
-        <section id="contacto" className="contact-band border-t border-border py-28">
-          <div className="mx-auto flex max-w-7xl flex-col justify-between gap-12 px-5 md:flex-row md:items-end md:px-8">
-            <div>
-              <p className="section-kicker">04 — Contacto</p>
-              <h2 className="section-title mt-6">Hacé ruido.</h2>
-            </div>
-            <div className="space-y-4 md:text-right">
-              <a
-                href="mailto:hola@ruidobanda.com.ar"
-                className="block font-display text-xl hover:text-primary md:text-3xl"
-              >
-                hola@ruidobanda.com.ar
-              </a>
-              <a
-                href="tel:+5491112345678"
-                className="block font-mono text-sm text-muted-foreground hover:text-primary"
-              >
-                +54 9 11 1234 5678
-              </a>
-              <p className="text-xs uppercase text-muted-foreground">
-                Fechas · Prensa · Contrataciones
-              </p>
-            </div>
-          </div>
-        </section>
+        <Contact />
       </main>
 
       <footer className="border-t border-border bg-background px-5 py-10 md:px-8">
