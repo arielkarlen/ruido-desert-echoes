@@ -13,7 +13,7 @@ export default function HeroBanner() {
       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-16 pt-32 md:px-8 md:pb-20">
         <p className="section-kicker mb-10">Argentina · Mendoza· Stoner / Doom / Desert Rock</p>
         <h1 className="max-w-5xl font-display text-5xl font-black uppercase leading-[0.88] sm:text-8xl lg:text-[9rem]">
-          Ecos del
+          Ritual del
           <br />
           <span className="text-primary">caos</span>
         </h1>

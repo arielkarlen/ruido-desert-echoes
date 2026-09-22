@@ -1,7 +1,7 @@
 export const tracks = [
-  ["01", "Ritual de Viento", "07:42"],
-  ["02", "Colapso Estelar", "06:15"],
-  ["03", "El Gran Humo", "09:03"],
-  ["04", "Horizonte Rojo", "05:58"],
-  ["05", "Manto de Tierra", "11:20"],
+  ["01", "Estigia", "04:26"],
+  ["02", "Caronte", "04:59"],
+  ["03", "Limbo", "05:59"],
+  ["04", "Dioses del norte", "04:04"],
+  ["05", "Al limite de dios", "04:10"],
 ];
