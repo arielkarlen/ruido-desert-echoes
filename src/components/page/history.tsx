@@ -13,9 +13,9 @@ export default function History() {
         </h2>
         <div className="mt-10 space-y-6 text-base leading-8 text-muted-foreground">
           <p>
-            Formados entre la mirada del Aconcagua y el polvo del desierto cuyano, el{" "}
-            <strong>R U I D O</strong> comienza a gestarse en 2023, en el sótano de una sala del
-            centro mendocino, de la mano de Ariel y Rober.
+            A la sombra del Aconcagua y con el calor del desierto cuyano, el{" "}
+            <strong>R U I D O</strong> comienza a gestarse un Enero del 2023, en el sótano de una
+            sala del centro mendocino, de la mano de Ariel y Rober.
           </p>
           <p>
             Con la llegada de Germán y Horacio en batería, la formación comienza a hacerse un lugar
