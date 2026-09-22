@@ -22,7 +22,7 @@ export default function HeroBanner() {
         </p>
       </div>
       <div className="absolute bottom-0 right-0 hidden border-l border-t border-border bg-background/75 px-7 py-4 font-mono text-[10px] uppercase text-muted-foreground lg:block">
-        Vol. I · MMXXVI
+        Vol. II · MMXXVII
       </div>
     </section>
   );

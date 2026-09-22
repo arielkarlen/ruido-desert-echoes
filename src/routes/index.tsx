@@ -8,6 +8,7 @@ import History from "@/components/page/history";
 import Members from "@/components/page/members";
 import Music from "@/components/page/music";
 import Contact from "@/components/page/contact";
+import MainFooter from "@/components/page/mainFooter";
 const pageTitle =
   meta.find((item) => typeof item.title === "string")?.title ??
   "R U I D O — Stoner / Doom / Desert Rock";
@@ -31,22 +32,7 @@ function Index() {
         <Music />
         <Contact />
       </main>
-
-      <footer className="border-t border-border bg-background px-5 py-10 md:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 md:flex-row">
-          <img
-            src={logoAsset.url}
-            alt="R U I D O"
-            width={877}
-            height={278}
-            loading="lazy"
-            className="w-32"
-          />
-          <p className="font-mono text-[9px] uppercase text-muted-foreground">
-            © 2026 R U I D O · Argentina
-          </p>
-        </div>
-      </footer>
+      <MainFooter />
     </div>
   );
 }

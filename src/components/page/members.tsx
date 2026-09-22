@@ -6,7 +6,7 @@ export default function Members() {
         <div className="mb-14 flex items-end justify-between gap-8">
           <div>
             <p className="section-kicker">02 — Integrantes</p>
-            <h2 className="section-title mt-5">Somos RUIDO</h2>
+            <h2 className="section-title mt-5">Atrás del RUIDO</h2>
           </div>
           <p className="hidden max-w-xs text-right text-sm leading-6 text-muted-foreground md:block">
             Cuatro fuerzas. Un solo empuje.

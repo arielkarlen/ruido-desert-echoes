@@ -1,6 +1,6 @@
 export const nav = [
-  ["Historia", "#historia"],
-  ["Somos RUIDO", "#banda"],
-  ["Música", "#musica"],
-  ["Contacto", "#contacto"],
-];
+  ["Somos RUIDO", "#historia"],
+  ["Atras del RUIDO", "#banda"],
+  ["Nuestro RUIDO ", "#musica"],
+  ["Segui el RUIDO", "#contacto"],
+] as const;
