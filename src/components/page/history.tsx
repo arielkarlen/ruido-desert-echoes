@@ -8,9 +8,8 @@ export default function History() {
       <div className="max-w-xl md:pt-10">
         <p className="section-kicker">01 — Historia</p>
         <h2 className="section-title mt-6">
-          Aun de
-          <br />
-          pie
+          Somos
+          <br />R U I D O
         </h2>
         <div className="mt-10 space-y-6 text-base leading-8 text-muted-foreground">
           <p>

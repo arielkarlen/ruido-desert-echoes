@@ -89,8 +89,21 @@ body {
 .nav-link:hover {
   color: var(--primary);
 }
+.nav-link.active {
+  position: relative;
+  color: var(--primary);
+}
+.nav-link.active::after {
+  position: absolute;
+  right: 0;
+  bottom: -0.65rem;
+  left: 0;
+  height: 2px;
+  background: var(--primary);
+  content: "";
+}
 .icon-button {
-  display: inline-flex;
+  display: none;
   height: 2.5rem;
   width: 2.5rem;
   align-items: center;
@@ -189,6 +202,9 @@ body {
 }
 
 @media (max-width: 767px) {
+  .icon-button {
+    display: inline-flex;
+  }
   .hero-section {
     min-height: 48rem;
   }
