@@ -8,7 +8,7 @@ Al no tener mucho contenido, de momento va a ser una landing Page. tendra estas 
 2. Somos RUIDO. Los integrantes, somos 4, Guitarra, Bajo, bateria y voz
 3. Musica. Esto sera el catalogo de discos. De momento solo tenemos uno, debera mostrarse una portada, los 5 temas, y los enlaces para escucharlo en youtube y en spotify
 4. Contacto. Datos de contacto, como correo y telefono, no tendra fromulario.
-5, Footer con enlaces a redes sociales, Facebook, Instagram, Youtube y Spotify.
+   5, Footer con enlaces a redes sociales, Facebook, Instagram, Youtube y Spotify.
 
 Quiero que avances con la landing, aplicando el estilo mas o menos de dePie.png y apuntando a estilo de stoner/doom/desert rock
 
