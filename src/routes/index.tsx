@@ -4,11 +4,10 @@ import { members } from "../config/members";
 import { meta } from "../config/meta";
 import { tracks } from "../config/tracks";
 import albumCover from "../assets/dunas-de-sangre.jpg";
-import ampsImage from "../assets/ruido-amps.jpg";
 import logoAsset from "../assets/logoFinal.png.asset.json";
 import MainHeader from "@/components/page/header";
 import HeroBanner from "@/components/page/heroBanner";
-
+import History from "@/components/page/history";
 const pageTitle =
   meta.find((item) => typeof item.title === "string")?.title ??
   "R U I D O — Stoner / Doom / Desert Rock";
@@ -27,49 +26,7 @@ function Index() {
       <MainHeader />
       <main>
         <HeroBanner />
-        <section
-          id="historia"
-          className="section-grid mx-auto grid max-w-7xl gap-14 px-5 py-28 md:grid-cols-2 md:px-8 md:py-40"
-        >
-          <div className="max-w-xl md:pt-10">
-            <p className="section-kicker">01 — Historia</p>
-            <h2 className="section-title mt-6">
-              El eco
-              <br />
-              del vacío
-            </h2>
-            <div className="mt-10 space-y-6 text-base leading-8 text-muted-foreground">
-              <p>
-                Formados entre el concreto de Buenos Aires y el polvo de las rutas del norte, R U I
-                D O nace como una necesidad de materializar el peso de la tierra.
-              </p>
-              <p>
-                Nuestra música no busca la velocidad, sino la gravedad. Cada riff es una piedra;
-                cada golpe de batería, un pulso tectónico que resuena en el pecho.
-              </p>
-            </div>
-            <div className="mt-12 flex items-center gap-5">
-              <span className="h-px w-20 bg-primary" />
-              <span className="font-mono text-[10px] uppercase text-muted-foreground">
-                Desde las profundidades
-              </span>
-            </div>
-          </div>
-          <figure className="image-frame md:ml-auto md:max-w-lg">
-            <img
-              src={ampsImage}
-              alt="Amplificadores y pedales en la sala de ensayo"
-              width={800}
-              height={1000}
-              loading="lazy"
-              className="h-full w-full object-cover grayscale transition duration-700 hover:grayscale-0"
-            />
-            <figcaption className="absolute bottom-4 left-4 font-mono text-[9px] uppercase text-foreground/70">
-              Sala de ensayo · Registro 01
-            </figcaption>
-          </figure>
-        </section>
-
+        <History />
         <section id="banda" className="border-y border-border bg-secondary/40 py-28 md:py-40">
           <div className="mx-auto max-w-7xl px-5 md:px-8">
             <div className="mb-14 flex items-end justify-between gap-8">
