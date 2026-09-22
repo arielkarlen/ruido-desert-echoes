@@ -1,0 +1,8 @@
+[build]
+  command = "bun run build"
+  publish = "dist"
+
+# This app targets Cloudflare Workers by default (see vite.config.ts); NITRO_PRESET
+# switches the nitro/TanStack Start build to Netlify's own Functions output instead.
+[build.environment]
+  NITRO_PRESET = "netlify"
