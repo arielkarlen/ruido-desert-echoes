@@ -1,12 +1,16 @@
 import { Facebook, Instagram, Play, Youtube } from "lucide-react";
+import { useLanguage } from "../../lib/language";
 
 export default function Contact() {
+  const { t } = useLanguage();
+  const { contact } = t;
+
   return (
     <section id="contacto" className="contact-band border-t border-border py-28">
       <div className="mx-auto flex max-w-7xl flex-col justify-between gap-12 px-5 md:flex-row md:items-end md:px-8">
         <div>
-          <p className="section-kicker">04 — Contacto</p>
-          <h2 className="section-title mt-6">Seguí el ruido.</h2>
+          <p className="section-kicker">{contact.kicker}</p>
+          <h2 className="section-title mt-6">{contact.title}</h2>
         </div>
         <div className="space-y-4 md:text-right">
           <a
@@ -21,9 +25,7 @@ export default function Contact() {
           >
             +54 9 2615440633
           </a> */}
-          <p className="text-xs uppercase text-muted-foreground">
-            Fechas · Prensa · Contrataciones
-          </p>
+          <p className="text-xs uppercase text-muted-foreground">{contact.tagline}</p>
           <div className="flex gap-3 md:justify-end">
             <a
               className="social-link"

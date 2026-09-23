@@ -1,5 +1,10 @@
 import logoAsset from "../../assets/logoFinal.png";
+import { useLanguage } from "../../lib/language";
+
 export default function MainFooter() {
+  const { t } = useLanguage();
+  const { footer } = t;
+
   return (
     <footer className="border-t border-border bg-background px-5 py-10 md:px-8">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 md:flex-row">
@@ -11,12 +16,8 @@ export default function MainFooter() {
           loading="lazy"
           className="w-32"
         />
-        <p className="text-[12pt] italic text-primary">
-          "Y una vez más, siguiendo el rastro de luz..."
-        </p>
-        <p className="font-mono text-[9px] uppercase text-muted-foreground">
-          © 2026 R U I D O · Argentina
-        </p>
+        <p className="text-[12pt] italic text-primary">{footer.quote}</p>
+        <p className="font-mono text-[9px] uppercase text-muted-foreground">{footer.copyright}</p>
       </div>
     </footer>
   );
