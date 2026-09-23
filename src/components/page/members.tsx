@@ -6,7 +6,7 @@ export default function Members() {
   const { members: membersCopy } = t;
 
   return (
-    <section id="banda" className="border-y border-border bg-secondary/40 py-28 md:py-40">
+    <section id="banda" className="border-y border-border bg-secondary py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="mb-14 flex items-end justify-between gap-8">
           <div>
