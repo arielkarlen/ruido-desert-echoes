@@ -40,8 +40,8 @@ function Index() {
       <main>
         <HeroBanner />
         <History />
-        <Members />
         <Music />
+        <Members />
         <Contact />
       </main>
       <MainFooter />
