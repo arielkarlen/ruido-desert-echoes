@@ -1,15 +1,20 @@
 import { members } from "../../config/members";
+import { useLanguage } from "../../lib/language";
+
 export default function Members() {
+  const { t } = useLanguage();
+  const { members: membersCopy } = t;
+
   return (
     <section id="banda" className="border-y border-border bg-secondary/40 py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="mb-14 flex items-end justify-between gap-8">
           <div>
-            <p className="section-kicker">02 — Integrantes</p>
-            <h2 className="section-title mt-5">Atrás del RUIDO</h2>
+            <p className="section-kicker">{membersCopy.kicker}</p>
+            <h2 className="section-title mt-5">{membersCopy.title}</h2>
           </div>
           <p className="hidden max-w-xs text-right text-sm leading-6 text-muted-foreground md:block">
-            Cuatro fuerzas. Un solo empuje.
+            {membersCopy.subtitle}
           </p>
         </div>
         <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
@@ -18,7 +23,7 @@ export default function Members() {
               <div className="relative aspect-[3/4] overflow-hidden bg-card">
                 <img
                   src={member.image}
-                  alt={`${member.name}, ${member.role}`}
+                  alt={`${member.name}, ${membersCopy.roles[index]}`}
                   width={768}
                   height={1024}
                   loading="lazy"
@@ -32,7 +37,7 @@ export default function Members() {
                 <h3 className="font-display text-sm font-black uppercase md:text-base">
                   {member.name}
                 </h3>
-                <p className="mt-1 text-xs uppercase text-primary">{member.role}</p>
+                <p className="mt-1 text-xs uppercase text-primary">{membersCopy.roles[index]}</p>
               </div>
             </article>
           ))}
