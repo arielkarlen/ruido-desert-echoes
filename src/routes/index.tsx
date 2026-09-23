@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { meta } from "../config/meta";
+import { useEffect } from "react";
+import { meta, metaContent } from "../config/meta";
+import { useLanguage } from "../lib/language";
 
 import logoAsset from "../assets/logoFinal.png.asset.json";
 import MainHeader from "@/components/page/header";
@@ -22,6 +24,16 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const { language } = useLanguage();
+
+  useEffect(() => {
+    const content = metaContent[language];
+    document.title = content.title;
+    document
+      .querySelector('meta[name="description"]')
+      ?.setAttribute("content", content.description);
+  }, [language]);
+
   return (
     <div className="site-shell min-h-screen overflow-hidden bg-background text-foreground">
       <MainHeader />
