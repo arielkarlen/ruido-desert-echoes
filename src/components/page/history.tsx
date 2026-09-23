@@ -40,7 +40,7 @@ export default function History() {
           </span>
         </div>
       </div>
-      <figure className="image-frame md:ml-auto md:max-w-lg">
+      <figure className="image-frame md:ml-auto md:max-w-lg md:mt-10">
         <img
           src={ampsImage}
           alt={history.imageAlt}
