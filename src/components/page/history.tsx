@@ -17,42 +17,41 @@ export default function History() {
   const { history } = t;
 
   return (
-    <section
-      id="historia"
-      className="section-grid mx-auto grid max-w-7xl gap-14 px-5 py-28 md:grid-cols-2 md:px-8 md:py-40"
-    >
-      <div className="max-w-xl md:pt-10">
-        <p className="section-kicker">{history.kicker}</p>
-        <h2 className="section-title mt-6">
-          {history.titleLine1}
-          <br />
-          {history.titleLine2}
-        </h2>
-        <div className="mt-10 space-y-6 text-base leading-8 text-muted-foreground">
-          {history.paragraphs.map((paragraph, index) => (
-            <p key={index}>{highlightBrand(paragraph)}</p>
-          ))}
+    <section id="historia" className="relative z-10 bg-background py-28 md:py-40">
+      <div className="section-grid mx-auto grid max-w-7xl gap-14 px-5 md:grid-cols-2 md:px-8">
+        <div className="max-w-xl md:pt-10">
+          <p className="section-kicker">{history.kicker}</p>
+          <h2 className="section-title mt-6">
+            {history.titleLine1}
+            <br />
+            {history.titleLine2}
+          </h2>
+          <div className="mt-10 space-y-6 text-base leading-8 text-muted-foreground">
+            {history.paragraphs.map((paragraph, index) => (
+              <p key={index}>{highlightBrand(paragraph)}</p>
+            ))}
+          </div>
+          <div className="mt-12 flex items-center gap-5">
+            <span className="h-px w-20 bg-primary" />
+            <span className="font-mono text-[10px] uppercase text-muted-foreground">
+              {history.tagline}
+            </span>
+          </div>
         </div>
-        <div className="mt-12 flex items-center gap-5">
-          <span className="h-px w-20 bg-primary" />
-          <span className="font-mono text-[10px] uppercase text-muted-foreground">
-            {history.tagline}
-          </span>
-        </div>
+        <figure className="image-frame md:ml-auto md:mt-10 md:max-w-lg">
+          <img
+            src={ampsImage}
+            alt={history.imageAlt}
+            width={800}
+            height={1000}
+            loading="lazy"
+            className="h-full w-full object-cover grayscale transition duration-700 hover:grayscale-0"
+          />
+          <figcaption className="absolute bottom-4 left-4 font-mono text-[9px] uppercase text-foreground/70">
+            {history.imageCaption}
+          </figcaption>
+        </figure>
       </div>
-      <figure className="image-frame md:ml-auto md:max-w-lg md:mt-10">
-        <img
-          src={ampsImage}
-          alt={history.imageAlt}
-          width={800}
-          height={1000}
-          loading="lazy"
-          className="h-full w-full object-cover grayscale transition duration-700 hover:grayscale-0"
-        />
-        <figcaption className="absolute bottom-4 left-4 font-mono text-[9px] uppercase text-foreground/70">
-          {history.imageCaption}
-        </figcaption>
-      </figure>
     </section>
   );
 }

@@ -12,7 +12,7 @@ export default function HeroBanner() {
         alt={hero.heroAlt}
         width={1920}
         height={1080}
-        className="absolute inset-0 h-full w-full object-cover"
+        className="fixed inset-0 -z-10 h-screen w-full object-cover"
       />
       <div className="hero-shade absolute inset-0" />
       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-16 pt-32 md:px-8 md:pb-20">
