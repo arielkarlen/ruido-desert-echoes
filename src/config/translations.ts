@@ -6,8 +6,8 @@ const translations = {
   es: {
     nav: [
       { label: "Somos RUIDO", href: "#historia" },
-      { label: "Atras del RUIDO", href: "#banda" },
       { label: "Nuestro RUIDO", href: "#musica" },
+      { label: "Atras del RUIDO", href: "#banda" },
       { label: "Segui el RUIDO", href: "#contacto" },
     ],
     hero: {
@@ -35,13 +35,13 @@ const translations = {
       imageCaption: "Sala de ensayo · Registro 01",
     },
     members: {
-      kicker: "02 — Integrantes",
+      kicker: "03 — Integrantes",
       title: "Atrás del RUIDO",
       subtitle: "Cuatro estilos. Una misma fuerza.",
       roles: ["Guitarra", "Bajo", "Batería", "Voz"],
     },
     music: {
-      kicker: "03 — Música",
+      kicker: "02 — Música",
       albumAlt: "Portada de 6 Monedas para Caronte",
       eyebrow: "EP · 2025",
       title: "6 Monedas para Caronte",
@@ -64,8 +64,8 @@ const translations = {
   en: {
     nav: [
       { label: "We are RUIDO", href: "#historia" },
-      { label: "Behind the RUIDO", href: "#banda" },
       { label: "Our RUIDO", href: "#musica" },
+      { label: "Behind the RUIDO", href: "#banda" },
       { label: "Follow the RUIDO", href: "#contacto" },
     ],
     hero: {
@@ -93,13 +93,13 @@ const translations = {
       imageCaption: "Rehearsal room · Recording 01",
     },
     members: {
-      kicker: "02 — Members",
+      kicker: "03 — Members",
       title: "Behind the RUIDO",
       subtitle: "Four styles. One single force.",
       roles: ["Guitar", "Bass", "Drums", "Vocals"],
     },
     music: {
-      kicker: "03 — Music",
+      kicker: "02 — Music",
       albumAlt: "Cover art of 6 Monedas para Caronte",
       eyebrow: "EP · 2025",
       title: "6 Monedas para Caronte",

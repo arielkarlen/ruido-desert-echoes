@@ -9,7 +9,7 @@ export default function Music() {
   const { music } = t;
 
   return (
-    <section id="musica" className="relative z-10 bg-background py-28 md:py-40">
+    <section id="musica" className="relative z-10 bg-secondary py-28 md:py-40">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <p className="section-kicker mb-12">{music.kicker}</p>
         <div className="grid items-center gap-14 md:grid-cols-2 md:gap-20">
