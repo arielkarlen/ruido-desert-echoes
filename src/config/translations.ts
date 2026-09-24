@@ -8,7 +8,7 @@ const translations = {
       { label: "Somos RUIDO", href: "#historia" },
       { label: "Nuestro RUIDO", href: "#musica" },
       { label: "Atras del RUIDO", href: "#banda" },
-      { label: "Difunde el RUIDO", href: "#prensa" },
+      { label: "Difunden el RUIDO", href: "#prensa" },
       { label: "Segui el RUIDO", href: "#contacto" },
     ],
     hero: {
