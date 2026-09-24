@@ -99,16 +99,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     scripts: [
       {
-        attrs: {
-          src: "https://www.googletagmanager.com/gtag/js?id=G-8HBRXWNE9N",
-          async: true,
-        },
-      },
-      {
-        children: `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-8HBRXWNE9N');`,
+        // Inlined so the gtag.js loader always renders in SSR output
+        // (a separate `<script async src>` tag gets dropped by the router's
+        // resource hoisting on this host, so we inject it imperatively instead).
+        children: `(function (w, d, s, id) {
+  w.dataLayer = w.dataLayer || [];
+  function gtag() { w.dataLayer.push(arguments); }
+  w.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', id);
+  var f = d.getElementsByTagName(s)[0];
+  var j = d.createElement(s);
+  j.async = true;
+  j.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+  f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'G-8HBRXWNE9N');`,
       },
     ],
   }),
