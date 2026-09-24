@@ -9,6 +9,7 @@ import HeroBanner from "@/components/page/heroBanner";
 import History from "@/components/page/history";
 import Members from "@/components/page/members";
 import Music from "@/components/page/music";
+import Press from "@/components/page/press";
 import Contact from "@/components/page/contact";
 import MainFooter from "@/components/page/mainFooter";
 const pageTitle =
@@ -42,6 +43,7 @@ function Index() {
         <History />
         <Music />
         <Members />
+        <Press />
         <Contact />
       </main>
       <MainFooter />

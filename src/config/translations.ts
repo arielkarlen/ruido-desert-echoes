@@ -8,6 +8,7 @@ const translations = {
       { label: "Somos RUIDO", href: "#historia" },
       { label: "Nuestro RUIDO", href: "#musica" },
       { label: "Atras del RUIDO", href: "#banda" },
+      { label: "Difunde el RUIDO", href: "#prensa" },
       { label: "Segui el RUIDO", href: "#contacto" },
     ],
     hero: {
@@ -51,8 +52,25 @@ const translations = {
       spotifyLabel: "Spotify",
       youtubeLabel: "YouTube",
     },
+    press: {
+      kicker: "04 — Prensa",
+      title: "Difunden el RUIDO",
+      subtitle: "Notas, entrevistas y podcasts que hablaron de nosotros.",
+      filters: {
+        all: "Todas",
+        nota: "Notas",
+        entrevista: "Entrevistas",
+        podcast: "Podcasts",
+      },
+      categoryLabels: {
+        nota: "Nota",
+        entrevista: "Entrevista",
+        podcast: "Podcast",
+      },
+      viewLabel: "Ver",
+    },
     contact: {
-      kicker: "04 — Contacto",
+      kicker: "05 — Contacto",
       title: "Seguí el ruido.",
       tagline: "Fechas · Prensa",
     },
@@ -66,6 +84,7 @@ const translations = {
       { label: "We are RUIDO", href: "#historia" },
       { label: "Our RUIDO", href: "#musica" },
       { label: "Behind the RUIDO", href: "#banda" },
+      { label: "Spread the RUIDO", href: "#prensa" },
       { label: "Follow the RUIDO", href: "#contacto" },
     ],
     hero: {
@@ -109,8 +128,25 @@ const translations = {
       spotifyLabel: "Spotify",
       youtubeLabel: "YouTube",
     },
+    press: {
+      kicker: "04 — Press",
+      title: "Spread the RUIDO",
+      subtitle: "Features, interviews and podcasts that covered us.",
+      filters: {
+        all: "All",
+        nota: "Features",
+        entrevista: "Interviews",
+        podcast: "Podcasts",
+      },
+      categoryLabels: {
+        nota: "Feature",
+        entrevista: "Interview",
+        podcast: "Podcast",
+      },
+      viewLabel: "View",
+    },
     contact: {
-      kicker: "04 — Contact",
+      kicker: "05 — Contact",
       title: "Follow the noise.",
       tagline: "Dates · Press ",
     },
