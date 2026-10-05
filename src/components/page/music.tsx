@@ -1,4 +1,4 @@
-﻿import { Play, Youtube } from "lucide-react";
+﻿import { FaSpotify, FaYoutube } from "react-icons/fa";
 import albumCover from "../../assets/6monedas.jpg";
 import { tracks } from "../../config/tracks";
 import { useLanguage } from "../../lib/language";
@@ -57,7 +57,7 @@ export default function Music() {
                 rel="noreferrer"
                 className="music-button music-button-primary"
               >
-                <Play size={15} fill="currentColor" /> {music.spotifyLabel}
+                <FaSpotify size={15} /> {music.spotifyLabel}
               </a>
               <a
                 href="https://music.youtube.com/playlist?list=OLAK5uy_mGOx6lhspNETe44fQaVvRC19wdkEERyJc&si=rSE4raQQ1njqP6Kx"
@@ -65,7 +65,7 @@ export default function Music() {
                 rel="noreferrer"
                 className="music-button music-button-secondary"
               >
-                <Youtube size={16} /> {music.youtubeLabel}
+                <FaYoutube size={16} /> {music.youtubeLabel}
               </a>
             </div>
           </div>

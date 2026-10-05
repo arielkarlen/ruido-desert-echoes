@@ -1,6 +1,6 @@
 import logoAsset from "../../assets/logoFinal.png";
 import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "../../lib/language";
 
 export default function MainHeader() {
@@ -8,33 +8,80 @@ export default function MainHeader() {
   const nav = t.nav;
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const pendingSectionRef = useRef<string | null>(null);
+  const scrollEndHandlerRef = useRef<(() => void) | null>(null);
 
   useEffect(() => {
     const sections = nav
       .map(({ href }) => document.querySelector(href))
       .filter((section): section is Element => section !== null);
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleSection = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((first, second) => second.intersectionRatio - first.intersectionRatio)[0];
+    let animationFrame: number | null = null;
 
-        if (visibleSection) {
-          setActiveSection(`#${visibleSection.target.id}`);
-        }
-      },
-      { rootMargin: "-80px 0px -55%", threshold: [0, 0.25, 0.5, 1] },
-    );
+    const updateActiveSection = () => {
+      animationFrame = null;
 
-    sections.forEach((section) => observer.observe(section));
+      if (pendingSectionRef.current) {
+        return;
+      }
 
-    return () => observer.disconnect();
+      const activationLine = 81;
+      const active = sections.reduce<Element | null>((current, section) => {
+        return section.getBoundingClientRect().top <= activationLine ? section : current;
+      }, null);
+
+      setActiveSection(active ? `#${active.id}` : "");
+    };
+
+    const scheduleUpdate = () => {
+      if (animationFrame === null) {
+        animationFrame = window.requestAnimationFrame(updateActiveSection);
+      }
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", scheduleUpdate);
+
+    return () => {
+      window.removeEventListener("scroll", scheduleUpdate);
+      window.removeEventListener("resize", scheduleUpdate);
+
+      if (animationFrame !== null) {
+        window.cancelAnimationFrame(animationFrame);
+      }
+    };
   }, [nav]);
 
+  useEffect(() => {
+    return () => {
+      if (scrollEndHandlerRef.current) {
+        document.removeEventListener("scrollend", scrollEndHandlerRef.current);
+      }
+    };
+  }, []);
+
   const handleNavClick = (href: string) => {
+    if (href === activeSection) {
+      return;
+    }
+
+    if (scrollEndHandlerRef.current) {
+      document.removeEventListener("scrollend", scrollEndHandlerRef.current);
+    }
+
+    pendingSectionRef.current = href;
     setActiveSection(href);
     setMenuOpen(false);
+
+    const finishNavigation = () => {
+      pendingSectionRef.current = null;
+      setActiveSection(href);
+      scrollEndHandlerRef.current = null;
+    };
+
+    scrollEndHandlerRef.current = finishNavigation;
+    document.addEventListener("scrollend", finishNavigation, { once: true });
   };
 
   return (
