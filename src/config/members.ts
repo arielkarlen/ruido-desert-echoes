@@ -5,7 +5,7 @@ import voiceImage from "../assets/member-voice.jpg";
 
 export const members = [
   { name: "ARIEL KARLEN.", role: "Guitarra", image: guitarImage },
-  { name: "NN", role: "Bajo", image: bassImage },
+  { name: "LUIS SANGUINET.", role: "Bajo", image: bassImage },
   { name: "GINO BAILONE.", role: "Batería", image: drumsImage },
   { name: "GERMÁN TRIGUEIRO SOLER.", role: "Voz", image: voiceImage },
 ];
